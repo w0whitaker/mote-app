@@ -1,4 +1,6 @@
 import { LitElement, html, css } from 'lit';
+import './components/m-grid.js';
+import './components/m-grid-item.js';
 
 class MoteApp extends LitElement {
   static properties = {
@@ -7,44 +9,9 @@ class MoteApp extends LitElement {
 
   static styles = css`
     :host {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      font-size: calc(10px + 2vmin);
-      color: #1a2b42;
-      max-width: 960px;
-      margin: 0 auto;
-      text-align: center;
-      background-color: var(--mote-app-background-color);
-    }
-
-    main {
-      flex-grow: 1;
-    }
-
-    .logo {
-      margin-top: 36px;
-      animation: app-logo-spin infinite 20s linear;
-    }
-
-    @keyframes app-logo-spin {
-      from {
-        transform: rotate(0deg);
-      }
-      to {
-        transform: rotate(360deg);
-      }
-    }
-
-    .app-footer {
-      font-size: calc(12px + 0.5vmin);
-      align-items: center;
-    }
-
-    .app-footer a {
-      margin-left: 5px;
+      display: block;
+      padding: 2.5rem;
+      font-family: sans-serif;
     }
   `;
 
@@ -56,7 +23,19 @@ class MoteApp extends LitElement {
   render() {
     return html`
       <main>
-        <h1>${this.header}</h1>
+        <m-grid>
+          <m-grid-item>
+            <h1>${this.header}</h1>
+          </m-grid-item>
+          <m-grid-item>
+            <p>
+              "Good-day, Lord St. Simon," said Holmes, rising and bowing. "Pray
+              take the basket-chair. This is my friend and colleague, Dr.
+              Watson. Draw up a little to the fire, and we will talk this matter
+              over."
+            </p>
+          </m-grid-item>
+        </m-grid>
       </main>
     `;
   }
