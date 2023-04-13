@@ -12,6 +12,16 @@ class MGrid extends LitElement {
     .m-grid--side-by-side {
       grid-template-columns: 1fr 1fr;
     }
+
+    @media all and (min-width: 40rem) {
+      .m-grid--2up {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .m-grid--fit {
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    }
   `;
 
   static properties = {

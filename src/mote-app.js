@@ -35,6 +35,8 @@ class MoteApp extends LitElement {
               over."
             </p>
           </m-grid-item>
+        </m-grid>
+        <m-grid variant="2up">
           <m-grid-item>
             <p>
               "A most painful matter to me, as you can most readily imagine, Mr.
@@ -57,23 +59,29 @@ class MoteApp extends LitElement {
               before the disappearance of the bride."
             </p>
           </m-grid-item>
+        </m-grid>
+        <m-grid>
           <m-grid-item>
-            <p>"Before the what?" asked Holmes with a start.</p>
-          </m-grid-item>
-          <m-grid-item>
-            <p>"The vanishing of the lady."</p>
-          </m-grid-item>
-          <m-grid-item>
-            <p>"When did she vanish, then?"</p>
-          </m-grid-item>
-          <m-grid-item>
-            <p>"At the wedding breakfast."</p>
-          </m-grid-item>
-          <m-grid-item>
-            <p>
-              "Indeed. This is more interesting than it promised to be; quite
-              dramatic, in fact."
-            </p>
+            <m-grid variant="fit">
+              <m-grid-item>
+                <p>"Before the what?" asked Holmes with a start.</p>
+              </m-grid-item>
+              <m-grid-item>
+                <p>"The vanishing of the lady."</p>
+              </m-grid-item>
+              <m-grid-item>
+                <p>"When did she vanish, then?"</p>
+              </m-grid-item>
+              <m-grid-item>
+                <p>"At the wedding breakfast."</p>
+              </m-grid-item>
+              <m-grid-item>
+                <p>
+                  "Indeed. This is more interesting than it promised to be; quite
+                  dramatic, in fact."
+                </p>
+              </m-grid-item>
+            <m-grid>
           </m-grid-item>
         </m-grid>
       </main>
