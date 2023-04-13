@@ -1,19 +1,39 @@
 import { LitElement, html, css } from 'lit';
-// import { classMap } from 'lit/directives/class-map.js';
+import { classMap } from 'lit/directives/class-map.js';
 
 class MGrid extends LitElement {
   static styles = css`
-    :host {
+    .m-grid {
       display: grid;
       gap: 1rem;
       margin-bottom: 1rem;
-      background-color: limegreen;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .m-grid--side-by-side {
+      grid-template-columns: 1fr 1fr;
     }
   `;
 
+  static properties = {
+    variant: { type: String },
+  };
+
+  constructor() {
+    super();
+    this.variant = {};
+  }
+
   render() {
-    return html` <slot></slot> `;
+    const classes = {
+      'm-grid': true,
+      [`m-grid--${this.variant}`]: this.variant,
+    };
+
+    return html`
+      <div class="${classMap(classes)}">
+        <slot></slot>
+      </div>
+    `;
   }
 }
 
