@@ -1,4 +1,5 @@
 import { LitElement, css, html } from 'lit';
+import { classMap } from 'lit/directives/class-map.js';
 
 /**
  * An example element.
@@ -18,8 +19,12 @@ export class MBox extends LitElement {
   }
 
   render() {
+    const classes = {
+      'm-box': true,
+    };
+
     return html`
-      <div>
+      <div class="${classMap(classes)}">
         <slot></slot>
       </div>
     `;
@@ -29,6 +34,10 @@ export class MBox extends LitElement {
     return css`
       :host {
         display: block;
+      }
+
+      .m-box {
+        border: 1px solid black;
       }
     `;
   }
