@@ -4,12 +4,21 @@ import { LitElement, html, css } from 'lit';
 class MGridItem extends LitElement {
   static styles = css`
     :host {
-      background-color: lightblue;
+      display: block;
+    }
+
+    .m-grid-item {
+      display: flex;
+      border: 1px solid #ccc;
     }
   `;
 
   render() {
-    return html` <slot></slot> `;
+    return html`
+      <div class="m-grid-item">
+        <slot></slot>
+      </div>
+    `;
   }
 }
 

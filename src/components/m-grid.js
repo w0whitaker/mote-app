@@ -3,6 +3,10 @@ import { classMap } from 'lit/directives/class-map.js';
 
 class MGrid extends LitElement {
   static styles = css`
+    :host {
+      display: block;
+    }
+
     .m-grid {
       display: grid;
       gap: 1rem;
@@ -19,8 +23,14 @@ class MGrid extends LitElement {
       }
     }
 
+    @media all and (min-width: 50rem) {
+      .m-grid--1-to-3up {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+    }
+
     .m-grid--fit {
-      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
   `;
 

@@ -60,7 +60,7 @@ class MoteApp extends LitElement {
             </p>
           </m-grid-item>
         </m-grid>
-        <m-grid>
+        <m-grid variant="1-3up">
           <m-grid-item>
             <m-grid variant="fit">
               <m-grid-item>
@@ -77,11 +77,11 @@ class MoteApp extends LitElement {
               </m-grid-item>
               <m-grid-item>
                 <p>
-                  "Indeed. This is more interesting than it promised to be; quite
-                  dramatic, in fact."
+                  "Indeed. This is more interesting than it promised to be;
+                  quite dramatic, in fact."
                 </p>
               </m-grid-item>
-            <m-grid>
+            </m-grid>
           </m-grid-item>
         </m-grid>
       </main>
