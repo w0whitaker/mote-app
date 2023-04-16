@@ -1,31 +1,12 @@
-<p align="center">
-  <img width="200" src="https://open-wc.org/hero.png"></img>
-</p>
+# Mote UI
 
-## Open-wc Starter App
+Mote UI is a library of native Web Components. It is divided into two "layers": composition and utility. Composition elements are used to create layouts, while utility elements are used to provide functionality.
+
+## Acknowledgements
+A lot of the inspiration for this project comes from Andy Bell and Heydon Pickering's [Every Layout](https://every-layout.dev/). I am deeply indebted to both of them. 
+## Composition
+Generic composition elements provide the layout structure, not just of whole pages, but of utility elements as well.
+
+---  
 
 [![Built with open-wc recommendations](https://img.shields.io/badge/built%20with-open--wc-blue.svg)](https://github.com/open-wc)
-
-## Quickstart
-
-To get started:
-
-```bash
-npm init @open-wc
-# requires node 10 & npm 6 or higher
-```
-
-## Scripts
-
-- `start` runs your app for development, reloading on file changes
-- `start:build` runs your app after it has been built using the build command
-- `build` builds your app and outputs it in your `dist` directory
-- `test` runs your test suite with Web Test Runner
-- `lint` runs the linter for your project
-- `format` fixes linting and formatting errors
-
-## Tooling configs
-
-For most of the tools, the configuration is in the `package.json` to reduce the amount of files in your project.
-
-If you customize the configuration a lot, you can consider moving them to individual files.

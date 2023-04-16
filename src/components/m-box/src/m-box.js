@@ -37,7 +37,9 @@ export class MBox extends LitElement {
       }
 
       .m-box {
-        border: 1px solid black;
+        border: 1px solid hotpink;
+        padding: var(--step--1);
+        font-size: var(--step--1);
       }
     `;
   }

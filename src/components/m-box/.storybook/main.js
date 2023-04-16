@@ -1,7 +1,14 @@
 /** @type { import('@storybook/web-components-vite').StorybookConfig } */
+import { vars, reset } from '../../../styles/styles';
+
 const config = {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
-  addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
+  addons: [
+    '@storybook/addon-links',
+    '@storybook/addon-essentials',
+    '@storybook/addon-interactions',
+    '@storybook/addon-a11y',
+  ],
   framework: {
     name: '@storybook/web-components-vite',
     options: {},
@@ -9,5 +16,12 @@ const config = {
   docs: {
     autodocs: 'tag',
   },
+  previewHead: head => `
+    ${head}
+    <style>
+      ${(vars, reset)}
+    </style>
+  `,
 };
+
 export default config;

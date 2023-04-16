@@ -1,6 +1,7 @@
 import { LitElement, html, css } from 'lit';
 import './components/m-grid.js';
 import './components/m-grid-item.js';
+import './styles/main.css';
 
 class MoteApp extends LitElement {
   static properties = {
