@@ -17,10 +17,13 @@ const config = {
     autodocs: 'tag',
   },
   previewHead: head => `
-    ${head}
-    <style>
-      ${(vars, reset)}
-    </style>
+  ${head}
+  <style>
+    ${vars}
+  </style>
+  <style>
+    ${reset}
+  </style>
   `,
 };
 

@@ -1,6 +1,6 @@
 import { css } from 'lit';
 
-const vars = () => css`
+const vars = css`
   :root {
     --measure: 60ch;
 
@@ -46,7 +46,7 @@ const vars = () => css`
   }
 `;
 
-const reset = () => css`
+const reset = css`
   *,
   *::before,
   *::after {
@@ -63,6 +63,7 @@ const reset = () => css`
   blockquote,
   dl,
   dd {
+    font-family: system-ui, sans-serif;
     margin: 0;
   }
 
