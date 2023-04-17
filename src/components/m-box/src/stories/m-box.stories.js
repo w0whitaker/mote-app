@@ -6,16 +6,23 @@ export default {
   component: 'm-box',
   argTypes: {
     padding: {
-      options: ['none', 'scant', 'narrow', 'standard', 'wide', 'generous'],
+      options: ['none', 'scant', 'narrow', 'standard', 'wide', 'jumbo'],
+      control: 'select',
+    },
+    border: {
+      control: 'boolean',
+    },
+    thickness: {
+      options: ['thin', 'medium', 'thick', 'heavy'],
       control: 'select',
     },
   },
 };
 
-function Template({ padding }) {
+function Template({ padding, border, thickness }) {
   return html`
-    <m-box .padding=${padding}>
-      <p>Box content</p>
+    <m-box .padding=${padding} .border=${border} .thickness=${thickness}>
+      <h2 slot="content">Box content</h2>
     </m-box>
   `;
 }
@@ -23,4 +30,5 @@ function Template({ padding }) {
 export const Box = Template.bind({});
 Box.args = {
   padding: 'none',
+  border: true,
 };
